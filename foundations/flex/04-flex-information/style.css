@@ -1,15 +1,46 @@
 body {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
+
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 52px;
+
+  /* Problem doesn't call for this, but it would be a nice addition */
+  /* flex: wrap; */
 }
 
 img {
   width: 100px;
   height: 100px;
+  border: 1px solid blue;
 }
 
 .title {
   font-size: 36px;
   font-weight: 900;
+
+  margin-bottom: 32px;
+}
+
+.info {
+  flex: 0 200px;
+
+  /* The provided solution uses: */
+  /* max-width: 200px; */
+
+  /* Difference between `flex: 0 200px` and `max-width: 200px`:
+     * Content is smaller than 200px (eg. very little text):
+       * max-width: item will shrink to content size
+       * flex: item will still be 200px
+     * Content bigger than 200px (eg. large image or word):
+       * max-width: overflow
+       * flex: item will grow to size of content
+  */
+  border: 1px solid red;
 }
 
 /* do not edit this footer */
